@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Quote, Star } from 'lucide-react';
 import { RevealOnScroll } from './RevealOnScroll';
@@ -32,12 +33,12 @@ const Testimonials: React.FC = () => {
                         <Quote size={60} />
                     </div>
                     <p className="text-gray-300 font-medium mb-8 pt-6 relative z-10 leading-relaxed">
-                    "Clean, hygienic and friendly trainers – I love working out here. The equipment is top notch and the vibe is always positive."
+                    "Hands down the best gym in Gomti Nagar Extension. The vibe is amazing, very spacious, and the Jerai equipment is top-notch. It's clean and never feels too crowded."
                     </p>
                     <div className="flex items-center gap-4 border-t border-white/5 pt-6 mt-auto">
-                    <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center font-bold text-brand-red border border-white/10">R</div>
+                    <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center font-bold text-brand-red border border-white/10">A</div>
                     <div>
-                        <h4 className="font-bold text-white text-sm uppercase tracking-wider">Rahul S.</h4>
+                        <h4 className="font-bold text-white text-sm uppercase tracking-wider">Aditya Verma</h4>
                         <span className="text-xs text-gray-500">Member since 2023</span>
                     </div>
                     </div>
@@ -50,12 +51,12 @@ const Testimonials: React.FC = () => {
                         <Quote size={60} />
                     </div>
                     <p className="text-gray-300 font-medium mb-8 pt-6 relative z-10 leading-relaxed">
-                    "Top-notch equipment in Gomti Greens. Finally a gym in Lucknow that understands premium standards without being overcrowded."
+                    "I've been to many gyms in Lucknow, but The Sweat Society stands out. The trainers are knowledgeable and actually pay attention to your form. Highly recommended!"
                     </p>
                     <div className="flex items-center gap-4 border-t border-white/5 pt-6 mt-auto">
-                    <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center font-bold text-brand-red border border-white/10">A</div>
+                    <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center font-bold text-brand-red border border-white/10">P</div>
                     <div>
-                        <h4 className="font-bold text-white text-sm uppercase tracking-wider">Anjali M.</h4>
+                        <h4 className="font-bold text-white text-sm uppercase tracking-wider">Priya Singh</h4>
                         <span className="text-xs text-gray-500">Member since 2024</span>
                     </div>
                     </div>
@@ -68,12 +69,12 @@ const Testimonials: React.FC = () => {
                         <Quote size={60} />
                     </div>
                     <p className="text-gray-300 font-medium mb-8 pt-6 relative z-10 leading-relaxed">
-                    "The trainers actually care about your form. It's not just about lifting heavy, it's about lifting right. Best decision I made."
+                    "Great environment for serious workouts. The crowd is decent, and the facilities are always well-maintained. Perfect place to focus on your goals."
                     </p>
                     <div className="flex items-center gap-4 border-t border-white/5 pt-6 mt-auto">
-                    <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center font-bold text-brand-red border border-white/10">V</div>
+                    <div className="w-12 h-12 bg-zinc-900 flex items-center justify-center font-bold text-brand-red border border-white/10">R</div>
                     <div>
-                        <h4 className="font-bold text-white text-sm uppercase tracking-wider">Vikram K.</h4>
+                        <h4 className="font-bold text-white text-sm uppercase tracking-wider">Rohan Kapoor</h4>
                         <span className="text-xs text-gray-500">Member since 2023</span>
                     </div>
                     </div>

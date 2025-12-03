@@ -1,17 +1,23 @@
+
 import React from 'react';
 import { RevealOnScroll } from './RevealOnScroll';
+import { IMAGES } from '../constants/images';
 
 const Gallery: React.FC = () => {
-  // Using picsum with specific dimensions to create a masonry-like feel
-  // Added 6th image as requested
-  const images = [
-    { src: "https://picsum.photos/600/600?grayscale", span: "md:col-span-1 md:row-span-2", alt: "Strength Zone" },
-    { src: "https://picsum.photos/800/400?grayscale", span: "md:col-span-2 md:row-span-1", alt: "Cardio Deck" },
-    { src: "https://picsum.photos/400/400?grayscale", span: "md:col-span-1 md:row-span-1", alt: "Free Weights" },
-    { src: "https://picsum.photos/400/401?grayscale", span: "md:col-span-1 md:row-span-1", alt: "Personal Training" },
-    { src: "https://picsum.photos/800/401?grayscale", span: "md:col-span-2 md:row-span-1", alt: "Group Classes" },
-    { src: "https://picsum.photos/600/300?grayscale", span: "md:col-span-3 md:row-span-1", alt: "Recovery Lounge" },
+  // Merging local layout config with centralized image source
+  const layoutConfig = [
+    { span: "md:col-span-1 md:row-span-2" },
+    { span: "md:col-span-2 md:row-span-1" },
+    { span: "md:col-span-1 md:row-span-1" },
+    { span: "md:col-span-1 md:row-span-1" },
+    { span: "md:col-span-2 md:row-span-1" },
+    { span: "md:col-span-3 md:row-span-1" }
   ];
+
+  const images = IMAGES.gallery.map((img, index) => ({
+    ...img,
+    ...layoutConfig[index]
+  }));
 
   return (
     <section className="py-20 bg-brand-gray">

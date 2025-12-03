@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Dumbbell, HeartPulse, Users, Activity } from 'lucide-react';
 import { RevealOnScroll } from './RevealOnScroll';
+import { IMAGES } from '../constants/images';
 
 const services = [
   {
@@ -8,28 +10,28 @@ const services = [
     icon: <Dumbbell />,
     desc: "Free weights, squat racks, and resistance machines designed for building raw power.",
     features: ["Olympic Lifting Platforms", "Dumbbells up to 50kg", "Hammer Strength Machines"],
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop"
+    image: IMAGES.services.strength
   },
   {
     title: "Cardio & HIIT",
     icon: <HeartPulse />,
     desc: "Boost endurance with our premium treadmill fleet and high-intensity interval zones.",
     features: ["Advanced Treadmills", "Rowing Machines", "Stair Masters"],
-    image: "https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1470&auto=format&fit=crop"
+    image: IMAGES.services.cardio
   },
   {
     title: "Personal Training",
     icon: <Users />,
     desc: "1-on-1 coaching customized to your specific body type, goals, and lifestyle.",
     features: ["Custom Diet Plans", "Form Correction", "Progress Tracking"],
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop"
+    image: IMAGES.services.personalTraining
   },
   {
     title: "Body Transformation",
     icon: <Activity />,
     desc: "Holistic weight management programs focusing on sustainable fat loss and muscle gain.",
     features: ["Body Composition Analysis", "Weekly Check-ins", "Nutritional Guidance"],
-    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1470&auto=format&fit=crop"
+    image: IMAGES.services.transformation
   }
 ];
 
@@ -66,28 +68,29 @@ const Services: React.FC = () => {
                         <img 
                             src={service.image} 
                             alt={service.title} 
-                            className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-all duration-500 grayscale group-hover:grayscale-0"
+                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/90 group-hover:from-black/70 group-hover:to-black/80 transition-all duration-500"></div>
+                        {/* Gradient overlay to ensure text is readable against the bright image */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90 group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/80 transition-all duration-500"></div>
                     </div>
 
                     <div className="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-full blur-3xl group-hover:bg-brand-red/20 transition-colors z-0"></div>
                     
                     <div className="flex flex-col md:flex-row items-center md:justify-between mb-8 gap-4 md:gap-0 w-full relative z-10">
                         <h3 className="text-2xl md:text-3xl font-black text-white uppercase italic tracking-tighter order-2 md:order-1 drop-shadow-lg">{service.title}</h3>
-                        <div className="text-gray-400 group-hover:text-brand-red transition-colors order-1 md:order-2 scale-125">
+                        <div className="text-gray-400 group-hover:text-brand-red transition-colors order-1 md:order-2 scale-125 drop-shadow-md">
                             {service.icon}
                         </div>
                     </div>
                     
-                    <p className="text-gray-300 mb-8 flex-grow font-medium leading-relaxed relative z-10 drop-shadow-md">
+                    <p className="text-gray-200 mb-8 flex-grow font-medium leading-relaxed relative z-10 drop-shadow-md">
                         {service.desc}
                     </p>
                     
                     <ul className="space-y-4 mt-auto inline-block md:block text-left w-full max-w-xs md:max-w-none relative z-10">
                         {service.features.map((feat, i) => (
-                            <li key={i} className="flex items-center gap-3 text-sm text-gray-200 justify-start font-bold uppercase tracking-wide drop-shadow-md">
-                                <div className="w-1.5 h-1.5 bg-brand-red rotate-45 shrink-0 shadow-[0_0_10px_rgba(210,0,0,0.5)]"></div>
+                            <li key={i} className="flex items-center gap-3 text-sm text-white justify-start font-bold uppercase tracking-wide drop-shadow-md">
+                                <div className="w-1.5 h-1.5 bg-brand-red rotate-45 shrink-0 shadow-[0_0_10px_rgba(210,0,0,1)]"></div>
                                 {feat}
                             </li>
                         ))}
