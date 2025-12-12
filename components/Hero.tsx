@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 <div className="flex justify-center md:justify-start">
                     <div className="inline-block px-4 py-2 mb-8 border-l-4 border-brand-red bg-white/5 backdrop-blur-sm">
                         <span className="text-white font-bold text-xs md:text-sm uppercase tracking-[0.2em]">
-                        Lucknow's Premium Fitness Destination
+                        We transform you, <span className="normal-case tracking-normal">अदब से|</span>
                         </span>
                     </div>
                 </div>
